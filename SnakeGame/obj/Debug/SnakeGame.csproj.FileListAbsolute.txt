@@ -1,0 +1,11 @@
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\bin\Debug\SnakeGame.exe.config
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\bin\Debug\SnakeGame.exe
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\bin\Debug\SnakeGame.pdb
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.csproj.AssemblyReference.cache
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.GameScreen.resources
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.Properties.Resources.resources
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.csproj.GenerateResource.cache
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.csproj.CoreCompileInputs.cache
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.exe
+C:\Users\bruno\OneDrive\Documentos\GameSnake\SnakeGame\SnakeGame\obj\Debug\SnakeGame.pdb
