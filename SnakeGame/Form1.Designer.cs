@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.PnTela = new System.Windows.Forms.Panel();
-            this.LBPontuacao = new System.Windows.Forms.Label();
+            this.LbPontucao = new System.Windows.Forms.Label();
             this.MEnu = new System.Windows.Forms.ToolStripMenuItem();
             this.iNICIARGAMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,21 +61,24 @@
             // 
             // PnTela
             // 
+            this.PnTela.BackColor = System.Drawing.SystemColors.Control;
             this.PnTela.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PnTela.Location = new System.Drawing.Point(2, 69);
+            this.PnTela.Enabled = false;
+            this.PnTela.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.PnTela.Location = new System.Drawing.Point(2, 58);
             this.PnTela.Name = "PnTela";
             this.PnTela.Size = new System.Drawing.Size(428, 428);
             this.PnTela.TabIndex = 0;
             // 
-            // LBPontuacao
+            // LbPontucao
             // 
-            this.LBPontuacao.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBPontuacao.Location = new System.Drawing.Point(-2, 34);
-            this.LBPontuacao.Name = "LBPontuacao";
-            this.LBPontuacao.Size = new System.Drawing.Size(432, 23);
-            this.LBPontuacao.TabIndex = 1;
-            this.LBPontuacao.Text = "Pontos: 0";
-            this.LBPontuacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LbPontucao.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbPontucao.Location = new System.Drawing.Point(-2, 34);
+            this.LbPontucao.Name = "LbPontucao";
+            this.LbPontucao.Size = new System.Drawing.Size(432, 23);
+            this.LbPontucao.TabIndex = 1;
+            this.LbPontucao.Text = "Pontos: 0";
+            this.LbPontucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MEnu
             // 
@@ -91,6 +94,10 @@
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // Frame
+            // 
+            this.Frame.Tick += new System.EventHandler(this.Frame_Tick_1);
             // 
             // mENUToolStripMenuItem
             // 
@@ -212,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 498);
-            this.Controls.Add(this.LBPontuacao);
+            this.Controls.Add(this.LbPontucao);
             this.Controls.Add(this.PnTela);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -232,13 +239,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PnTela;
-        private System.Windows.Forms.Label LBPontuacao;
+        private System.Windows.Forms.Label LbPontucao;
         private System.Windows.Forms.ToolStripMenuItem MEnu;
         private System.Windows.Forms.ToolStripMenuItem iNICIARGAMEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
-        private System.Windows.Forms.Timer Frame;
         private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iNICIARGAMEToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem1;
@@ -259,6 +263,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem iniciarToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem6;
+        public System.Windows.Forms.Timer Frame;
+        public System.Windows.Forms.Panel PnTela;
     }
 }
 

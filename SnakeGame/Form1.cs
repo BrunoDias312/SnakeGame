@@ -15,7 +15,7 @@ namespace SnakeGame{
 
         public GameScreen(){
             InitializeComponent();
-            Game = new Game(ref Frame, ref LBPontuacao, ref PnTela);
+            Game = new Game(ref Frame, ref LbPontucao, ref PnTela);
             //Game.StarGame();//Remover futuramente
         }
 
@@ -30,15 +30,21 @@ namespace SnakeGame{
                e.KeyCode == Keys.Up||
                e.KeyCode == Keys.Down){
                 Game.Arrow = e.KeyCode;
+                Console.WriteLine("setado");
             }
         }
 
         private void iniciarToolStripMenuItem4_Click(object sender, EventArgs e){
-            Game.StarGame();
+            Game.StartGame();
         }
 
         private void sairToolStripMenuItem6_Click(object sender, EventArgs e){
             Application.Exit();
+        }
+
+        private void Frame_Tick_1(object sender, EventArgs e)
+        {
+            Game.Tick();
         }
     }
 }

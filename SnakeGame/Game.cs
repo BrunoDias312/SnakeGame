@@ -23,7 +23,7 @@ namespace SnakeGame
 
         //Atributos Graficos
         private Bitmap offScreenBitmap; //Trabalhar com os pixels da tela. Inicio|Fim da tela;
-        private Graphics bitmapoGraph; //Desenhar os componentes em si;
+        private Graphics bitmapGraph; //Desenhar os componentes em si;
         private Graphics screenGraph; //Redenizar a tela com novas possicoes de comida e da cobra
 
 
@@ -43,11 +43,11 @@ namespace SnakeGame
         }
 
 
-        public void StarGame(){
+        public void StartGame(){
             Snake.Reset();
             Food.CreateFood();
             Direction = Keys.Left;
-            bitmapoGraph = Graphics.FromImage(offScreenBitmap);
+            bitmapGraph = Graphics.FromImage(offScreenBitmap);
             screenGraph = PnTela.CreateGraphics();
             Frame.Enabled = true;
         }
@@ -76,18 +76,18 @@ namespace SnakeGame
                     break;
             }
 
-            bitmapoGraph.Clear(Color.White);//Limpar a tela
+            bitmapGraph.Clear(Color.White);//Limpar a tela
             //Especificar endereco e tamanho da imagem, assim como alocar ela na tela
-            bitmapoGraph.DrawImage(Properties.Resources.food,(Food.Location.X * 15), (Food.Location.Y * 15), 15, 15);
+            bitmapGraph.DrawImage(Properties.Resources.food,(Food.Location.X * 15), (Food.Location.Y * 15), 15, 15);
             bool gameOver = false;
 
             for(int i = 0; i < Snake.Length; i++){
                 if(i == 0){//se for a possicao da cabeca da cobra
-                    bitmapoGraph.FillEllipse(new SolidBrush(ColorTranslator.FromHtml("#000000")),
+                    bitmapGraph.FillEllipse(new SolidBrush(ColorTranslator.FromHtml("#000000")),
                     (Snake.Location[i].X * 15), (Snake.Location[i].Y * 15), 15, 15);//Se for a cabeca
                 }
                 else{
-                    bitmapoGraph.FillEllipse(new SolidBrush(ColorTranslator.FromHtml("#4F4F4F")),
+                    bitmapGraph.FillEllipse(new SolidBrush(ColorTranslator.FromHtml("#4F4F4F")),
                     (Snake.Location[i].X * 15), (Snake.Location[i].Y * 15), 15, 15);//Se for o corpo
                 }
 
@@ -115,7 +115,7 @@ namespace SnakeGame
 
         public void GameOver(){//Fim de jogo 
             Frame.Enabled = false;
-            bitmapoGraph.Dispose();
+            bitmapGraph.Dispose();
             screenGraph.Dispose();
             pontos = 0;
             LbPontucao.Text = "Pontos: 0";
